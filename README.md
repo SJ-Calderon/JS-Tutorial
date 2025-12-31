@@ -1,2 +1,2 @@
 # JS-Tutorial
-Repo for learning JavaScript
+Tutorial Used: https://www.giraffeacademy.com/web-development/javascript/
