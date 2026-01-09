@@ -1,37 +1,26 @@
-let phrase = "Strings are fun";
+// Math Operators: +, -, *, /, %
 
-// Gets the # of characters within a string
-let len = phrase.length;
+document.getElementById("p1").innerText = ( 2 + 5 * 2 / 7 % 3 );
 
-/* String Methods */
-// toUpperCase
-let upper = phrase.toUpperCase();
+// Math Methods
+let num1 = -2;
+let num2 = 3;
 
-// toLowerCase
-let lower = phrase.toLowerCase();
+// abs, min, max
+let res = Math.abs(num1) + Math.min(num1,num2) + Math.max(num1,num2);
 
-// charAt
-// JavaScript indexes from 0
-let char = phrase.charAt(1);
+// round
+// rounds down if the decimal is .4 or less and up if the decimal is .5 or more
+let num3 = 1.5;
+res += Math.round(num3);
 
-// indexOf
-// This will return the index of the 1st instance of the character
-// Returns -1 if character not found
-let firstIndex = phrase.indexOf("i");
+// pow
+res = Math.pow(res, 2);
 
-// lastIndexOf
-let lastIndex = phrase.lastIndexOf("r");
+// sqrt
+res = Math.sqrt(res);
 
-// substring
-// 1st index is included, 2nd index is not included
-let substr = phrase.substring(0,3);
+// random
+let rand = Math.random();
 
-// endsWith
-// returns true if the string ends with the substring
-let endsWithFun = phrase.endsWith("fun");
-
-// includes
-// return true if the string includes the substring
-let includesAre = phrase.includes("are");
-
-document.getElementById("p1").innerText = ('The phrase "' + phrase + '" is ' + len + " characters long.");
+document.getElementById("p2").innerText = res + rand;
