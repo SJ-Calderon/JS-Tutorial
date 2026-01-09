@@ -1,25 +1,37 @@
-/*
- * There are various ways to define a variable in JavaScript
- * Older/Not Recommended: Automatically or Use var
- * Newer/Recommended: Use let or const
- * let: Block Scope, Declared before use, Cannot be Redeclared
- * const: Block Scope, Cannot be Redeclared, Cannot be Reassigned
- */
+let phrase = "Strings are fun";
 
-// String
-let name = "Mike";
+// Gets the # of characters within a string
+let len = phrase.length;
 
-// Number
-let age = 23;
-let gpa = 3.1;
+/* String Methods */
+// toUpperCase
+let upper = phrase.toUpperCase();
 
-// Boolean
-let isMale = true;
+// toLowerCase
+let lower = phrase.toLowerCase();
 
-// Null - Object abscence
-const flaws = null;
+// charAt
+// JavaScript indexes from 0
+let char = phrase.charAt(1);
 
-// Undefined - No assigned value
-let description = undefined;
+// indexOf
+// This will return the index of the 1st instance of the character
+// Returns -1 if character not found
+let firstIndex = phrase.indexOf("i");
 
-document.getElementById("p1").innerText = ("" + name + " is " + age + " years old and has a " + gpa + " gpa.");
+// lastIndexOf
+let lastIndex = phrase.lastIndexOf("r");
+
+// substring
+// 1st index is included, 2nd index is not included
+let substr = phrase.substring(0,3);
+
+// endsWith
+// returns true if the string ends with the substring
+let endsWithFun = phrase.endsWith("fun");
+
+// includes
+// return true if the string includes the substring
+let includesAre = phrase.includes("are");
+
+document.getElementById("p1").innerText = ('The phrase "' + phrase + '" is ' + len + " characters long.");
