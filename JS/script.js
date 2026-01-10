@@ -1,14 +1,17 @@
-// Arrays can be created using the new keyword or using a literal
-let fruits = new Array("Apples", "Oranges", "Peaches");
-let cars = ["Saab", "Volvo", "BMW"];
+// Function syntax in JavaScript:
+// function funcName(params){}
+function sayHi(name, age){
+    document.getElementById("p1").innerText = "Hello " + name + ". You are " + age + ".";
+}
+let name = window.prompt("Type your name");
+let age = window.prompt("Type your age");
+sayHi(name,age);
 
-// length property returns the number of array elements
-let numCarBrands = cars.length;
+function addition(num1, num2){
+    return num1 + num2;
+}
+let num1 = parseFloat(window.prompt("Input 1st number"));
+let num2 = parseFloat(window.prompt("Input 2nd number"));
+let sum = addition(num1, num2);
 
-// Strings can be split into an array using the split method
-let names = "Steven, Mike, Marc";
-names = names.split(",");
-
-document.getElementById("p1").innerText = "Random Fruit: " + fruits[Math.floor(Math.random()*10)%3];
-
-document.getElementById("p2").innerText = "Examples of names: " + names;
+document.getElementById("p2").innerText = "Sum of numbers is " + sum;
