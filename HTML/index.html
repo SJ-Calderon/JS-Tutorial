@@ -6,15 +6,19 @@
     </head>
     <body>
         <header>
-            <h1>Accessing HTML Elements</h1>
+            <h1>Event Listeners</h1>
         </header>
 
         <main>
-            <h2 id="header"></h2>
-            <a id="link" href="https://www.giraffeacademy.com/">Giraffe Academy</a>        
+            <img id="image" src="../Images/Lucaal.jpg" width="100" />
+            <br />
+
+            <!-- onclick is a JS Event which triggers JS code when the element is clicked -->
+            <!-- "this" is a keyword that specifies the current element -->
+            <!-- You must include the "on" for the JS Event when using in HTML -->
+            <button id="button" onclick="handleClick(this)">Click Me</button>        
         </main>
 
-        <!-- You must insert the JavaScript code below the elements you want to modify -->
         <script src="../JS/script.js"></script>
     </body>
 </html>

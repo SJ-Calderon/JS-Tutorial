@@ -1,13 +1,20 @@
-// This will store the HTML element in the variable
-let header = document.getElementById("header");
-let link = document.getElementById("link");
+// This is the function which will be triggered with the onClick event
+function handleClick(element) {
+    element.style = "background-color:blue;"
+}
 
-// innerHTML will let you modify the HTML code for the element
-header.innerHTML = "Overwritten Header";
-link.innerHTML = "Amazon";
+let img = document.getElementById("image");
 
-// You can modify any attribute directly for the HTML element
-header.style.color = "red";
-header.style.backgroundColor = "blue";
-link.href = "https://www.amazon.com";
-link.style = "color:green;"
+// This will add a listener for the specified event
+// You can specify the code directly in the parameter
+// You need to drop the "on" for the event when using it directly in JS
+img.addEventListener("mouseover", function(){
+    this.style = "box-shadow: 2px 2px 2px grey;";
+    this.width = "150";
+});
+
+// This will reset the image to the original styling
+img.addEventListener("mouseout", function(){
+    this.style = "";
+    this.width = "100";
+});
