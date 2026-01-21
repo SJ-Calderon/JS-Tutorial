@@ -1,43 +1,25 @@
 let p1 = document.getElementById("p1");
+let p2 = document.getElementById("p2");
 
-function getDayName(dayNum) {
-    let day;
-
-    switch (dayNum) {
-        case 0:
-            day = "Sunday";
-            break;
-        
-        case 1:
-            day = "Monday";
-            break;
-
-        case 2:
-            day = "Tuesday";
-            break;
-        
-        case 3:
-            day = "Wednesday";
-            break;
-
-        case 4:
-            day = "Thursday";
-            break
-
-        case 5:
-            day = "Friday";
-            break;
-
-        case 6:
-            day = "Saturday";
-            break;
-
-        default:
-            day = "Not a day of the week";
-            break;
+// Objects are containers of key value pairs
+// Keys must be unique
+// Key value pairs are commas separated
+let person = {
+    name: "Mike",
+    age: 23,
+    isMale: true,
+    occuptation: "programmer",
+    printName: function(){
+        p1.innerHTML = "<h2>" + this.name + "</h2>";
     }
+};
 
-    return day;
-}
+// Access values using the corresponding key
+// Keys act as attributes of the object
+// p1.innerText = person.name;
+person.printName();
 
-p1.innerText = getDayName(2);
+// Values can be updated
+person.name = "Joe";
+
+p2.innerText = person.name;
