@@ -1,18 +1,43 @@
 let p1 = document.getElementById("p1");
 
-/*
- * Comparators: >, >=, <, <=, ==, !=
- */
-function max(num1, num2, num3) {
-    if (num1 >= num2 && num1 >= num3) {
-        return num1;
+function getDayName(dayNum) {
+    let day;
+
+    switch (dayNum) {
+        case 0:
+            day = "Sunday";
+            break;
+        
+        case 1:
+            day = "Monday";
+            break;
+
+        case 2:
+            day = "Tuesday";
+            break;
+        
+        case 3:
+            day = "Wednesday";
+            break;
+
+        case 4:
+            day = "Thursday";
+            break
+
+        case 5:
+            day = "Friday";
+            break;
+
+        case 6:
+            day = "Saturday";
+            break;
+
+        default:
+            day = "Not a day of the week";
+            break;
     }
-    else if (num2 >= num1 && num2 >= num3) {
-        return num2;
-    }
-    else {
-        return num3;
-    }
+
+    return day;
 }
 
-p1.innerText = max(1, 2, 3);
+p1.innerText = getDayName(2);
