@@ -1,16 +1,26 @@
 let p1 = document.getElementById("p1");
 let p2 = document.getElementById("p2");
 
-let numberGrid = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-    [0]
+let friends = ["Oscar", "Angela", "Kevin"];
+
+// forEach specifies what code will run for each of the elements of the array
+friends.forEach(function(element) {
+    p1.innerText += element + "\n";
+});
+
+let books = [
+    {
+        title: "Harry Potter",
+        author: "JK Rowling",
+        pages: 300
+    },
+    {
+        title: "Green Eggs & Ham",
+        author: "Dr. Seuss",
+        pages: 25
+    }
 ];
 
-for (let i = 0; i < numberGrid.length; i++) {
-    for (let j = 0; j < numberGrid[i].length; j++) {
-        p1.innerText += numberGrid[i][j] + " ";
-    }
-    p1.innerText += "\n"
-}
+books.forEach(function(book) {
+    p2.innerText += "Author: " + book.author + "\n";
+});
