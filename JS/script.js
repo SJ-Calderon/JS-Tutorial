@@ -1,25 +1,23 @@
 let p1 = document.getElementById("p1");
 let p2 = document.getElementById("p2");
 
-// Objects are containers of key value pairs
-// Keys must be unique
-// Key value pairs are commas separated
-let person = {
-    name: "Mike",
-    age: 23,
-    isMale: true,
-    occuptation: "programmer",
-    printName: function(){
-        p1.innerHTML = "<h2>" + this.name + "</h2>";
-    }
+let myMovie = {
+    title: "The Social Network",
+    releaseYear: "2010",
+    duration: 2.0,
+    actors: [
+        {
+            name: "Jessie Eisenburg",
+            birthday: new Date("October 5, 1983"),
+            hometown: "New York, New York"
+        },
+        {
+            name: "Ronney Mara",
+            birthday: new Date("April 17, 1985"),
+            hometown: "Bedford, New York"
+        }
+    ]
 };
 
-// Access values using the corresponding key
-// Keys act as attributes of the object
-// p1.innerText = person.name;
-person.printName();
-
-// Values can be updated
-person.name = "Joe";
-
-p2.innerText = person.name;
+p1.innerText = myMovie.title;
+p2.innerText = myMovie.actors[0].name;
