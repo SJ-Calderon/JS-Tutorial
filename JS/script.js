@@ -1,14 +1,25 @@
 let p1 = document.getElementById("p1");
 let p2 = document.getElementById("p2");
 
-let i = 1;
-let j = 20;
+let password = "wordpass";
+let response;
+let entryCount = 0;
+let entryLimit = 3;
+let error = false;
 
-while (i <= 10) {
-    p1.innerHTML += i + "<br />";
-    i++;
+while (response != password && !error) {
+    if (entryCount < entryLimit) {
+        response = window.prompt("Enter Password");
+        entryCount++;
+    }
+    else {
+        error = true;
+    }
 }
 
-do {
-    p2.innerHTML += j + "<br />";
-} while (j <= 10)
+if (error) {
+    alert("Too many entries");
+}
+else {
+    alert("You got it!");
+}
