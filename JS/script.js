@@ -1,21 +1,18 @@
 let p1 = document.getElementById("p1");
 
-let isMale = true;
-let isTall = true;
-
 /*
- * Logical operators: && (AND), || (OR), ! (NOT)
- * If Statements: if ... else if ... else
+ * Comparators: >, >=, <, <=, ==, !=
  */
-if (isMale && isTall) {
-    p1.innerText = "You are a tall male.";
+function max(num1, num2, num3) {
+    if (num1 >= num2 && num1 >= num3) {
+        return num1;
+    }
+    else if (num2 >= num1 && num2 >= num3) {
+        return num2;
+    }
+    else {
+        return num3;
+    }
 }
-else if (isMale && !isTall) {
-    p1.innerText = "You are a short male.";
-}
-else if (!isMale && isTall) {
-    p1.innerText = "You are not a male and tall.";
-}
-else {
-    p1.innerText = "You are not male or tall.";
-}
+
+p1.innerText = max(1, 2, 3);
