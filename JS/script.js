@@ -1,25 +1,12 @@
 let p1 = document.getElementById("p1");
 let p2 = document.getElementById("p2");
 
-let password = "wordpass";
-let response;
-let entryCount = 0;
-let entryLimit = 3;
-let error = false;
-
-while (response != password && !error) {
-    if (entryCount < entryLimit) {
-        response = window.prompt("Enter Password");
-        entryCount++;
-    }
-    else {
-        error = true;
-    }
+for (let i = 0; i < 10; i++) {
+    p1.innerHTML += i + "<br />";
 }
 
-if (error) {
-    alert("Too many entries");
-}
-else {
-    alert("You got it!");
+let friends = ["Jim", "Stanley", "Kevin"];
+
+for (let j = 0; j < friends.length; j++) {
+    p2.innerHTML += friends[j] + "<br />";
 }
