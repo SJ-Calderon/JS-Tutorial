@@ -1,17 +1,21 @@
-let msgs = document.getElementById("messages");
-let txtbox = document.getElementById("textbox");
-let button = document.getElementById("button");
+let p1 = document.getElementById("p1");
 
-button.addEventListener("click", function(){
-    // createElement will create a new HTML element
-    let newMsg = document.createElement("li");
+let isMale = true;
+let isTall = true;
 
-    // The value attribute will grab the text within the HTML element
-    newMsg.innerHTML = txtbox.value;
-
-    // appendChild will add the given HTML element as a child
-    msgs.appendChild(newMsg);
-
-    // This clears the text within the textbox
-    txtbox.value = "";
-});
+/*
+ * Logical operators: && (AND), || (OR), ! (NOT)
+ * If Statements: if ... else if ... else
+ */
+if (isMale && isTall) {
+    p1.innerText = "You are a tall male.";
+}
+else if (isMale && !isTall) {
+    p1.innerText = "You are a short male.";
+}
+else if (!isMale && isTall) {
+    p1.innerText = "You are not a male and tall.";
+}
+else {
+    p1.innerText = "You are not male or tall.";
+}
