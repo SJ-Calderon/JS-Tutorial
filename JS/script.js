@@ -1,36 +1,16 @@
 let p1 = document.getElementById("p1");
 let p2 = document.getElementById("p2");
 
-let questions = [
-    {
-        prompt: "What color are apples?\n(a) Red/Green\n" +
-        "(b) Purple\n(c) Orange",
-        answer: "a"
-    },
-    {
-        prompt: "What color are Bananas?\n(a) Teal\n" +
-        "(b) Magenta\n(c) Yellow",
-        answer: "c"
-    },
-    {
-        prompt: "What color are strawberries?\n(a) Yellow\n" +
-        "(b) Red\n(c) Blue",
-        answer: "b"
-    }
+let numberGrid = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [0]
 ];
 
-let score = 0;
-
-for (let i = 0; i < questions.length; i++) {
-    let response = window.prompt(questions[i].prompt);
-
-    if (response == questions[i].answer) {
-        score++;
-        alert("Correct!")
+for (let i = 0; i < numberGrid.length; i++) {
+    for (let j = 0; j < numberGrid[i].length; j++) {
+        p1.innerText += numberGrid[i][j] + " ";
     }
-    else {
-        alert("WRONG!");
-    }
+    p1.innerText += "\n"
 }
-
-alert("You got " + score + "/" + questions.length);
